@@ -8,6 +8,13 @@ import {
 } from "react-icons/rx";
 import { RiInstagramLine } from "react-icons/ri";
 
+type Skill = {
+  skill_name: string;
+  image: string;
+  width: number;
+  height: number;
+};
+
 export const SKILL_DATA = [
   {
     skill_name: "HTML",
@@ -45,7 +52,6 @@ export const SKILL_DATA = [
     width: 80,
     height: 80,
   },
-
   {
     skill_name: "TypeScript",
     image: "ts.png",
@@ -82,7 +88,7 @@ export const SKILL_DATA = [
     width: 40,
     height: 40,
   },
-] as const;
+] satisfies Skill[];
 
 export const SOCIALS = [
   {
@@ -127,22 +133,19 @@ export const FRONTEND_SKILL = [
     width: 80,
     height: 80,
   },
-
   {
     skill_name: "React",
     image: "react.png",
     width: 80,
     height: 80,
   },
-
-
   {
     skill_name: "Next.js 14",
     image: "next.png",
     width: 80,
     height: 80,
   },
-] as const;
+] satisfies Skill[];
 
 export const BACKEND_SKILL = [
   {
@@ -163,16 +166,42 @@ export const BACKEND_SKILL = [
     width: 40,
     height: 40,
   },
-
-
-] as const;
+] satisfies Skill[];
 
 export const FULLSTACK_SKILL = [
-] as const;
+  {
+    skill_name: "Next.js",
+    image: "next.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "React",
+    image: "react.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "Node.js",
+    image: "node.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "MongoDB",
+    image: "mongodb.png",
+    width: 40,
+    height: 40,
+  },
+  {
+    skill_name: "TypeScript",
+    image: "ts.png",
+    width: 80,
+    height: 80,
+  }
+] satisfies Skill[];
 
-export const OTHER_SKILL = [
-
-] as const;
+export const OTHER_SKILL: Skill[] = [];
 
 export const PROJECTS = [
   {
@@ -199,19 +228,16 @@ export const FOOTER_DATA = [
   {
     title: "Community",
     data: [
-
       {
         name: "GitHub",
         icon: RxGithubLogo,
         link: "https://github.com",
       },
-
     ],
   },
   {
     title: "Social Media",
     data: [
-
       {
         name: "Instagram",
         icon: RiInstagramLine,
@@ -222,7 +248,6 @@ export const FOOTER_DATA = [
   {
     title: "About",
     data: [
-   
       {
         name: "Contact Me",
         icon: null,
